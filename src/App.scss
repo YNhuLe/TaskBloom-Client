@@ -1,0 +1,20 @@
+.side-panel{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.panels{
+    display: flex;
+    height: 100vh;
+}
+.main-panel{
+    background-image: url("../public/bg5.jpg");
+    background-repeat: no-repeat;
+background-position: center;
+   background-size: cover;
+    flex-grow: 1;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}

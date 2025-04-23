@@ -1,0 +1,33 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.user-day{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    
+    cursor: pointer;
+    &__container{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: .5rem 0;
+        &--active{
+            background-color: #D7D7D7;
+            &::before{
+                content: '';
+                width: 4px;
+                height: 100%;
+                background-color: #0F6CBD;
+                position: absolute;
+                left: 0;
+            }
+        }
+        
+    }
+    &--icon{
+        margin-left: 1rem;
+    }
+}

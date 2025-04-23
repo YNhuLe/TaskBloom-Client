@@ -1,0 +1,17 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.breakdown-button {
+    background-color: #0F6CBD;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    opacity: 0; 
+    transition: opacity 0.3s ease;
+  
+    &.hovered {
+      opacity: 1; 
+    }
+  }

@@ -1,0 +1,20 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
+
+.header{
+    margin: 0;
+    padding: 3rem 1rem 1.5rem;
+    width: 100%;
+    background: linear-gradient(to bottom, #8080ff, #1e90ff);
+    color: white;
+    
+    &__text{
+        font-size: 1.8rem;
+        font-weight: lighter
+    }
+    &__date{
+        padding-top: .5rem;;
+        font-size: 1rem;
+        font-weight: lighter;
+    }
+}

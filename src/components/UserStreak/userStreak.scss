@@ -1,0 +1,115 @@
+.user-streak {
+    padding: 0 1.5rem; 
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin-top: 1rem; 
+    padding-bottom: 1.25rem;
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem; 
+    }
+  
+    .week-days {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.5rem;
+  
+      .day-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem; 
+      }
+  
+      .day {
+        padding: 0.5rem;
+        border: 1px solid #e0e0e0;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #1a1a1a;
+        background-color: #f5f5f5;
+        width: 100%; 
+        text-align: center;
+      }
+  
+      .checkbox-container {
+        input[type="checkbox"] {
+          width: 1.2rem;
+          height: 1.2rem;
+          cursor: pointer;
+          margin:0;
+          accent-color: #0f6cbd; 
+  
+          &:disabled {
+            cursor: not-allowed;
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+
+  .user-container{
+    width: 338px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1.5rem 1rem; 
+    padding-bottom: 2rem;
+    &__header{
+        display: flex;
+        flex-direction: row;
+
+        align-items: center;
+        gap: 10px
+    }
+    &__profile{
+        width: 34.22px;
+        height: 34.22px;
+        border-radius: 50%;
+        background: #ccc;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       
+    }
+  }
+
+.buttons{
+    border-radius: 4px;
+    padding: .1rem;
+    border: 1px solid #D1D1D1;
+    background-color: white;
+    width: 103px;
+    font-size: 1rem;
+    padding: .40rem;
+    font-weight: 600;
+}
+.user-buttons{
+    display: flex;
+     gap: 1rem;
+     &--active{
+        background-color: #0F6CBD;
+        color: white;
+        border: none;
+    }
+}
+
+.streak-text{
+    font-weight: 400;
+    color: #808080;
+    &__day{
+        color: #808080;
+        padding-top: 5px;
+        margin: 0;
+        font-weight: 300;
+    }
+    &--bold{
+        color: #0F6CBD;
+    }
+}
