@@ -21,7 +21,9 @@ const GenerateSubTaskModal = ({ taskId, onClose, onBreakdown, baseUrl }) => {
       const response = await axios.post(
         `${baseUrl}/${taskId}/generate-subtask`
       );
-    //   console.log(response.data);
+      await onBreakdown();
+      onClose();
+      //   console.log(response.data);
     } catch (error) {
       console.error("Error in sending task to API", error);
     }

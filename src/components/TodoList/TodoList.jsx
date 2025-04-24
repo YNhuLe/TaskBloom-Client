@@ -18,6 +18,10 @@ const TodoList = (props) => {
   async function getTasks() {
     try {
       const response = await axios.get(props.baseUrl);
+      const tasksWithSubtasks = response.data.map((task) => ({
+        ...task,
+        subtasks: task.subtasks || [], // Ensure subtasks is always an array
+      }));
       setTaskList(response.data);
     } catch (error) {
       console.log("Unable to get to do list data", error);
@@ -50,9 +54,7 @@ const TodoList = (props) => {
 
       setTaskList((prevTasks) =>
         prevTasks.map((task) =>
-          task.id === taskId
-            ? { ...task, subtasks: transformedSubTasks }
-            : task
+          task.id === taskId ? { ...task, subtasks: transformedSubTasks } : task
         )
       );
     } catch (error) {
@@ -178,7 +180,8 @@ const TodoList = (props) => {
           <GenerateSubTaskModal
             taskId={selectedTaskId}
             onClose={closeModal}
-            onBreakdown={handleTaskBreakdown}
+            // onBreakdown={handleTaskBreakdown}
+            onBreakdown={getTasks}
             baseUrl={props.baseUrl}
           />
         )}
