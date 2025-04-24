@@ -21,17 +21,17 @@ margin: 3rem 1rem;
 .todo-input input {
   flex: 1;
   padding: 8px;
-  border: 1px solid #ccc;
+  border: 1px solid $primary-white;
   border-radius: 5px;
 }
 
 .todo-input button {
   padding: 8px 12px;
-  background:rgba(3, 152, 252, 0.4);
-  color: white;
+  background:rgba(3, 112, 185, 0.9);
+  color: $primary-white;
 
   cursor: pointer;
-      border: .1rem solid white;
+      border: .1rem solid $primary-white;
     cursor: pointer;
     border-radius: .5rem;
         -webkit-backdrop-filter: blur(1rem);
@@ -40,6 +40,7 @@ margin: 3rem 1rem;
 }
 .todo-input button:hover{
   transform: scale3d(1.06, 1.06, 1.06);
+    background:rgba(3, 152, 252, 1);
 }
 
 .todo-list {
@@ -49,22 +50,27 @@ margin: 3rem 1rem;
   margin-left: 20px;
 }
 
-.task-item {
+.task{
+  &-item {
   padding: 10px;
   // border-bottom: 1px solid #ddd;
   position: relative;
-  background: rgba(219, 211, 211, 0.7);
+  background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
+    color: $primary-white;
+        border-bottom-style: outset;
+
 }
 
-.task-content {
+&-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
-}
+  @include tablet-desktop-label-medium;
+}}
 
 .task-content label {
   display: flex;
@@ -110,6 +116,8 @@ input[type="checkbox"]:checked::after {
   list-style: none;
   padding: 0;
   margin-top: 10px;
+  @include tablet-desktop-small-body-copy-medium;
+  
 }
 
 .subtask-list li {

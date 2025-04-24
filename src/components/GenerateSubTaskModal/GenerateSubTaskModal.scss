@@ -13,7 +13,15 @@
 .container{
     position: relative;
 }
-.modal-overlay{
+.modal{
+
+    &-header{
+@include tablet-desktop-wordmark-regular;
+    }
+    &-content{
+@include tablet-desktop-label-medium;  font-weight: 300;
+    }
+    &-overlay{
     height: 100vh;
     @include tablet{
         background-color: #13182c70;
@@ -22,7 +30,7 @@
         position: absolute;
         width: 100vw;
     }
-}
+}}
 .confirm-modal{
     display: flex;
     justify-content: center;
@@ -97,6 +105,7 @@
     }
 }
 .btn{
+    @include tablet-desktop-label-medium;  font-weight: 300;
     padding: .5rem 3.9375rem;
     border-radius: 8px;
     cursor: pointer;

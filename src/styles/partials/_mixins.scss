@@ -1,5 +1,113 @@
 @use "./variables.scss" as *;
+@use "./typography.scss";
+@mixin mobile-wordmark-regular {
+  font-family: "Newsreader";
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: 400;
+}
 
+@mixin mobile-title-normal {
+  font-family: "Newsreader";
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin mobile-title-italic {
+  font-family: "Newsreader";
+  font-size: 1.625rem;
+  line-height: 2.375rem;
+  font-weight: 300;
+  font-style: italic;
+}
+@mixin mobile-heading-medium {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.4375rem;
+  font-weight: 500;
+}
+@mixin mobile-body-copy-medium {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  font-weight: 500;
+}
+@mixin mobile-body-copy-light {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  font-weight: 300;
+}
+@mixin mobile-small-body-copy-medium {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.625rem;
+  line-height: 0.75rem;
+  font-weight: 500;
+}
+@mixin mobile-label-medium {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.75rem;
+  line-height: 0.9375rem;
+  font-weight: 500;
+}
+
+//text size, line height for tablet, desktop screen
+@mixin tablet-desktop-wordmark-regular {
+  font-family: "Newsreader";
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+
+@mixin tablet-desktop-title-normal {
+  font-family: "Newsreader";
+  font-size: 3.25rem;
+  line-height: 4.125rem;
+  font-weight: 300;
+  font-style: normal;
+}
+@mixin tablet-desktop-title-italic {
+  font-family: "Newsreader";
+  font-size: 3.25rem;
+  line-height: 4.125rem;
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin tablet-desktop-heading-medium {
+  font-family:"Outfit", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  font-weight: 500;
+}
+
+@mixin tablet-desktop-body-copy-medium {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 500;
+}
+
+@mixin tablet-desktop-body-copy-light {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.625rem;
+  font-weight: 300;
+}
+@mixin tablet-desktop-small-body-copy-medium {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.85rem;
+  line-height: 0.9375rem;
+  font-weight: 300;
+}
+
+@mixin tablet-desktop-label-medium {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  line-height: 1.0938rem;
+  font-weight: 400;
+}
 @mixin tablet {
   @media screen and (min-width: $tablet-breakpoint) {
     @content;
