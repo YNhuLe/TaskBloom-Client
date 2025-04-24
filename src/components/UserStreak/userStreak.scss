@@ -1,3 +1,5 @@
+@use '../../styles/partials/variables' as *;
+@use '../../styles/partials/mixins' as *;
 .user-streak {
     padding: 0 1.5rem; 
     background-color: #ffffff;
@@ -54,6 +56,9 @@
     }
   }
 
+  .user-name{
+    @include tablet-desktop-body-copy-light;
+  }
   .user-container{
     width: 338px;
     display: flex;

@@ -5,16 +5,16 @@
     margin: 0;
     padding: 3rem 1rem 1.5rem;
     width: 100%;
-    background: linear-gradient(to bottom, #8080ff, #1e90ff);
-    color: white;
+    background: linear-gradient(to bottom, #2323d4, #b693dd);
+    color:$primary-white;
     
     &__text{
-        font-size: 1.8rem;
-        font-weight: lighter
+
+        @include tablet-desktop-title-normal;
     }
     &__date{
         padding-top: .5rem;;
-        font-size: 1rem;
-        font-weight: lighter;
+
+        @include tablet-desktop-heading-medium;
     }
 }
